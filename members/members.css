@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.home-container, .leads, .teams {
+    width: 85%;
+    margin: 2vw auto;
+    min-height: 75vh;
+    border-radius: 2vw;
+    position: relative;
+    z-index: 1;
+}
+
+.home-container h1, .leads h1, .teams h1 {
+    margin: 2vw 0;
+    text-align: center;
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+.back_img{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.back_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.line {
+    min-height: 17vw;
+    margin: 7vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    row-gap: 5vw;
+}
+
+.home-container .line .profile-card:nth-child(2) {
+    position: relative;
+    top: -3vw;
+}
+
+.profile-card {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    padding: 1vw;
+    border-radius: 50%;
+    box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
+    transition: all .4s;
+    margin: 0vw 20px;
+}
+
+.img {
+    transition: all .4s;
+}
+
+.profile-card:hover {
+    border-radius: 10px;
+    height:17vw;
+}
+
+.profile-card .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-card:hover .img {
+    height: 70%;
+    border-radius: 10px;
+    transform: translateY(-70px);
+}
+
+.img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: all .4s;
+    object-position: 50% 0%;
+    z-index: 99;
+}
+
+.caption {
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.caption h3 {
+    font-size: 1.5vw;
+    color: #0c52a1;
+    font-weight: 600;
+}
+
+.caption p {
+
+    color: black;
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin: 2px 0 12px 0;
+}
+
+.caption p span{
+    font-size: 1vw;
+}
+
+.caption .social-links i {
+    font-size: 1.5vw;
+    margin: 0 3px;
+    cursor: pointer;
+    color: #333;
+    transition: all .4s;
+}
+
+.caption .social-links i:hover {
+    color: #0c52a1;
+}
+#long{
+    font-size: 19px;
+}

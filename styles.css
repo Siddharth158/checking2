@@ -1,0 +1,692 @@
+@font-face {
+    font-family: "Silk Serif";
+    src: url(./assets/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: "Silk Serif";
+    src: url(./assets/silkserif-lightitalic-webfont.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* ----------------------Loader--------------- */
+#loader {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    padding: 8vw;
+
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 9vw;
+    gap: 1.5vw;
+}
+
+.line h1 {
+    font-size: 7vw;
+    font-weight: 800
+}
+
+.line1-part1 {
+    margin-right: 2vw;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+}
+
+.line1-part1 h5 {
+    width: 6vw;
+    text-align: right;
+    font-family: 'Silk Serif';
+    font-weight: 100;
+}
+
+.now {
+    font-size: 7vw;
+    font-weight: 500;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime {
+    0% {
+        opacity: 1;
+        font-family: "Inter", sans-serif;
+        color: #fff;
+        -webkit-text-stroke: 1px #fff;
+
+    }
+
+    49% {
+        opacity: 0;
+        font-family: "Inter", sans-serif;
+        color: #fff;
+        -webkit-text-stroke: 1px #fff;
+
+    }
+
+    50% {
+        opacity: 1;
+        font-family: 'Silk Serif';
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+    }
+
+    100% {
+        opacity: 0;
+        font-family: 'Silk Serif';
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+    }
+}
+
+.wait {
+    margin-top: 3vw;
+    margin-left: 5vw;
+}
+
+.loader_background {
+    width: 50%;
+    position: absolute;
+    top: -15%;
+    right: -20%;
+}
+
+.loader_background img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* ----------------------navbar---------------------- */
+
+.nav {
+    background-color: rgba(70, 70, 70, 0);
+    padding: 0.2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 102;
+}
+
+.hamberger {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hamberger_line {
+    width: 2.5vw;
+    border: 2px solid white;
+}
+
+.header,
+.nav_content {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.logo {
+    width: 5vw;
+}
+
+.logo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.real_nav {
+    width: 30%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 2vw;
+    z-index: 9;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5vw;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.real_nav div {
+    height: 3vw;
+    overflow: hidden;
+}
+
+.real_nav h1 {
+    /* position: absolute; */
+    font-size: 2.5vw;
+}
+.real_nav a{
+    scroll-behavior: smooth;
+}
+#search{
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+}
+#search video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* -----------------------------hero---------------------------- */
+
+.main_Container::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, .07), hsla(0, 0%, 0%, 1));
+}
+
+
+.hero_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -30%;
+    z-index: -1;
+}
+
+.hero_img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    padding-top: 15vw;
+    /* margin-top: 5vw; */
+}
+
+.hero h1 {
+    font-size: 7vw;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0px;
+
+}
+
+.hero h3 {
+    font-size: 3vw;
+    text-align: center;
+}
+
+.hero_body div {
+    overflow: hidden;
+}
+
+.hero_body span {
+    font-size: 3vw;
+}
+
+.hero_video {
+    width: 100%;
+    margin-top: 10VW;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero_video p {
+    width: 40%;
+    font-size: 2vw;
+    font-weight: 900;
+}
+
+.hero_video video {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_video div {
+    width: 30vw;
+    height: 30vw;
+}
+
+
+/* ------------------------mission------------------------- */
+
+.mission {
+    margin: 5vw auto;
+    /* width: 80%; */
+    min-height: 100vh;
+    position: relative;
+}
+.about_club{
+    width: 80%;
+    margin: auto;
+}
+
+.about_club h1{
+    text-align: center;
+    font-size: 3vw;
+}
+.about_club p{
+    margin: 2vw auto;
+    width: 70%;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.about_mission , .about_vission{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.about_mission div video, .about_vission div video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about_mission p, .about_vission p{
+    width: 100%;
+    font-size: 1.5vw;
+}
+.about_vission{
+    margin-left: 20%;
+}
+
+.about_mission h1, .about_vission h1{
+    font-size: 3vw;
+}
+.back_img2{
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+    top: 0%;
+    left: -70%;
+}
+.back_img2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------------------------events---------------------- */
+#Events {
+    padding-top: 5vw;
+}
+
+#Events>h1 {
+    text-align: center;
+    font-size: 3vw;
+    margin: 5vw 0 3vw;
+}
+
+.events {
+    width: 70%;
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+    /* border-radius: 5vw; */
+    /* overflow: hidden; */
+}
+
+.events_img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.events_img img {
+    /* border-radius: 5vw; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.events_img video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.event_details {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 3.1vw;
+    top: 0%;
+    left: 0%;
+    z-index: 101;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+.details_child {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.details_child h1 {
+    font-size: 3.5vw;
+}
+
+.details_child p {
+    font-weight: 600;
+    width: 80%;
+    font-size: 1.5vw;
+}
+
+.details_child button {
+    color: white;
+    font-size: 2vw;
+    border: 2px solid white;
+    border-radius: 1vw;
+    background-color: transparent;
+    width: 50%;
+    pointer-events: all;
+    transition: 0.4s;
+}
+
+.details_child button:hover {
+    background-color: rgba(255, 255, 255, 0.255);
+}
+
+.details_child:nth-child(2) {
+    opacity: 0;
+}
+
+
+/* --------------teams------------- */
+.team {
+    margin-top: 5vw;
+    width: 100%;
+    min-height: 100v;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vw;
+    position: relative;
+}
+
+
+.teams, .home-container {
+    width: 80%;
+    margin: 2vw auto 0;
+    min-height: 75vh;
+    border-radius: 2vw;
+    position: relative;
+    z-index: 1;
+}
+.back_img3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+}
+
+.back_img3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team h1,
+.home_container h1 {
+    margin: 2vw 0;
+    text-align: center;
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+.back_img {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.back_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.team_line {
+    min-height: 17vw;
+    margin-top: 7vw;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+
+.profile-card {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    padding: 1vw;
+    border-radius: 50%;
+    box-shadow: -5px 8px 45px rgba(51, 51, 51, 0.126);
+    transition: all .4s;
+    margin: 0 20px;
+}
+
+.img {
+    transition: all .4s;
+}
+
+.profile-card:hover {
+    border-radius: 10px;
+    height: 260px;
+}
+
+.profile-card .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-card:hover .img {
+    height: 70%;
+    border-radius: 10px;
+    transform: translateY(-70px);
+}
+
+.img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    transition: all .4s;
+    object-position: 50% 0%;
+    z-index: 99;
+}
+
+.caption {
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+.profile-card:hover .caption {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.caption h3 {
+    font-size: 21px;
+    color: #0c52a1;
+    font-weight: 600;
+}
+
+.caption p {
+
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 2px 0 12px 0;
+}
+
+.caption p span {
+    font-size: 12px;
+}
+
+.caption .social-links i {
+    font-size: 21px;
+    margin: 0 3px;
+    cursor: pointer;
+    color: #333;
+    transition: all .4s;
+}
+
+.caption .social-links i:hover {
+    color: #0c52a1;
+}
+
+
+
+.team a button {
+    color: white;
+    font-size: 2vw;
+    border: 2px solid white;
+    border-radius: 1vw;
+    background-color: transparent;
+    /* width: 50%; */
+    pointer-events: all;
+    padding: 0.5vw 1vw;
+    transition: 0.5s;
+}
+
+.team a button:hover {
+    background-color: rgba(255, 255, 255, 0.255);
+}
+
+
+
+
+/* -------------------connect----------------- */
+
+.connect {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vw;
+    /* justify-content: center; */
+}
+
+.footer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* gap: 20vw; */
+}
+
+.club_name {
+    flex-basis: 50%;
+}
+
+.footer .logo {
+    width: 15vw;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.social i {
+    margin-right: 1vw;
+    font-size: 2vw;
+}
+
+.back_img4{
+    position: absolute;
+    width: 100%;
+    top: -200%;
+    left: 30%;
+    z-index: -10;
+}
+
+.back_img4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
